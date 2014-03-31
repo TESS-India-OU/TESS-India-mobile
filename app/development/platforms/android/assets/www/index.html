@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+<!--         <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+        <link rel="stylesheet" href="css/bootstrap.3.0.3.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>TESS India learning app</title>
+    </head>
+    <body>
+     
+        <div class="container">
+            <div class="row tess-logo-row">
+                <div class="col-xs-12">
+                    <img id="tess-india-logo" class="img-responsive" src="img/TESS_INDIA_Landscape_Logo.png" />
+                </div>
+            </div>
+        </div>
+            
+        <!-- load -->
+        <div id="screen-loader" class="container">
+            <div class="row">
+                <div class="col-xs-8 col-xs-offset-2">
+                    <h4><span id="loader-message">Searching for the TESS India data on your device...</span> <img src="img/ajax-loader.gif" alt="starting up..." /></h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- home -->
+        <div id="screen-error" class="container hidden">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3>Learning App Error</h3>
+                    <div id="error-info"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- home -->
+        <div id="screen-choose-folder" class="hidden"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>Learning App</h3>
+                        <p>You have multiple folders that appear to contain the data. Please choose which one is the correct folder.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- folder list -->
+            <div class="container">
+                <div class="col-xs-12">
+                    <table id="folder-list" class="table table-striped"></table>
+                </div>
+            </div>
+        </div>
+            
+        <!-- home -->
+        <div id="screen-home" class="hidden"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>Development Units</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="col-xs-12">
+                    <table id="unit-list" class="table table-striped"></table>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p><a id="btn-home-about" href="#" class="btn btn-info">About</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            <!-- about -->
+        <div id="screen-about" class="container hidden">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="screen-about-content">
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div id="screen-learning-unit" class="container hidden">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 id="learning-unit-title">Learning Unit Title</h3>
+                    
+                    <div class="panel-group" id="learning-unit-accordion">
+                    
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div id="applog-debugger" class="container hidden">
+            <div class="row">
+                <div class="col-xs-12" id="applog-debugger-container">
+                    <h3 id="learning-unit-title">Debug info</h3>
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+      </div>
+     
+    <!-- template only data - never make this visible -->
+    <div id="template-data" class="hide hidden">
+        
+        <!-- folder list row template -->
+        <tr id="template-folder-list-row">
+            <td class="folder-list-folder-title">Folder name</td>
+        </tr>
+        <!-- /folder list row template -->
+        
+        <div id="template-learning-unit-accordion">
+	        <div class="panel panel-default">
+		        <div class="panel-heading">
+		            <h4 class="panel-title">
+		                <a class="learning-unit-accordion-title" data-toggle="collapse" data-parent="#accordion" href="#COLLAPSE_ID">
+                        </a>
+		            </h4>
+		        </div>
+		        <div id="COLLAPSE_ID" class="panel-collapse collapse">
+		            <div id="LU_FILES_ID" class="learning-unit-accordion-content panel-body">
+		                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+		            </div>
+		        </div>
+		    </div>
+        </div>
+        
+    </div>
+
+        <script src="http://192.168.1.80:8080/target/target-script-min.js#anonymous"></script>
+
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/bootstrap.3.0.3.min.js"></script>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+         
+        <script type="text/javascript" src="js/index.js"></script>
+        
+    </body>
+</html>

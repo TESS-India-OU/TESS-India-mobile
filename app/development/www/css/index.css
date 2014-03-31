@@ -1,0 +1,14 @@
+.tess-logo-row {
+	margin-bottom: 10px;
+}
+.folder-list-folder-title {
+	font-size: .8em;
+	overflow-wrap: break-word;
+}
+.folder-list-row {
+    margin-bottom: 6px;
+    margin-top: 6px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    border-bottom: 1px solid #666;
+}

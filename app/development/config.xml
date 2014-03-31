@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="in.edu.tess-india.open.learningapp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>TessIndiaLearningApp</name>
+    <description>
+        TESS India app for learning
+    </description>
+    <author email="paul@padajo.com" href="http://padajo.com">
+        Paul Johnston at Padajo Ltd UK
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <feature name="FileTransfer">
+	    <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
+	</feature>
+
+   	<platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Launcher">
+                <param name="android-package" value="com.padajo.cordova.plugin.Launcher"/>
+            </feature>
+        </config-file>
+        <config-file target="config.xml" parent="/*">
+            <feature name="FileStorage">
+                <param name="android-package" value="com.padajo.cordova.plugin.FileStorage"/>
+            </feature>
+        </config-file>
+    </platform>
+    
+</widget>

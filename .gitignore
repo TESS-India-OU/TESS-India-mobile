@@ -1,0 +1,8 @@
+app/development/platforms/android/bin/*
+app/development/platforms/android/gen/*
+app/development/platforms/android/CordovaLib/bin/*
+app/development/platforms/android/CordovaLib/gen/*
+*.swp
+*.class
+
+/test_sd_card_content
